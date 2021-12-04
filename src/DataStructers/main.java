@@ -1,6 +1,9 @@
 package DataStructers;
 import DataStructers.DoublyLinkedList.*;
 import DataStructers.Queue.*;
+
+import static DataStructers.BST.*;
+
 public class main {
     public static void main(String[] args) {
 ////        LinkedList ll = new LinkedList();
@@ -27,16 +30,29 @@ public class main {
 //        for (int i=0;i<4;i++){
 //            System.out.println(q.dequeue());
 //        }
+//        QueueLinkedList ql = new QueueLinkedList();
+//        ql.enqueue(45);ql.enqueue(85);ql.enqueue(94);
+//        ql.display();
+//        System.out.println("Size :"+ql.Size);
+//        ql.deqeue();
+//        ql.deqeue();
+//        ql.deqeue();
+//        ql.deqeue();
+//        ql.display();
+//        System.out.println("Size :"+ql.Size);
 
-        QueueLinkedList ql = new QueueLinkedList();
-        ql.enqueue(45);ql.enqueue(85);ql.enqueue(94);
-        ql.display();
-        System.out.println("Size :"+ql.Size);
-        ql.deqeue();
-        ql.deqeue();
-        ql.deqeue();
-        ql.deqeue();
-        ql.display();
-        System.out.println("Size :"+ql.Size);
+        BTNode root = null;
+        root = insertBST(root,4);
+        root = insertBST(root,2);
+        root = insertBST(root,1);
+        root = insertBST(root,3);
+        root = insertBST(root,6);
+        root = insertBST(root,5);
+        root = insertBST(root,7);
+        BST.inorderTraverse(root);
+        int key = 20;
+        System.out.println();
+//        System.out.println("is "+key+" present in BST : "+search(root,key));
+        System.out.println("is "+key+" present in BST : "+SearchBST_Itr(root,key));
     }
 }
